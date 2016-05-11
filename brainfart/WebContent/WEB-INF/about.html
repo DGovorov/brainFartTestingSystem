@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+        <title>BrainfArt| Incorporated</title>
+
+        <meta name="description" content=""/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="profile" href="//gmpg.org/xfn/11"/>
+
+
+        <!-- Bootstrap's CSS -->
+        <link rel="stylesheet" href="css/bootstrap.css">
+        <link rel="stylesheet" href="css/responsive.css">
+
+        <!--Custom  Stylesheet-->
+        <link rel='stylesheet' id='bf-plugin-css' href='css/bf-plugin.css'>
+        <link rel='stylesheet' id='font-awesome-css' href='css/font-awesome.css'>
+        <link rel='stylesheet' id='bf-lazy-load-css' href='css/lazy-load.css'>
+        <link rel='stylesheet' id='bf-parallax-css' href='css/parallax.css'>
+        <link rel='stylesheet' id='bf-css' href='css/main-style.css'>
+
+        <!-- Google Fonts-->
+        <link rel='stylesheet' id='options_typography_Montserrat-css'
+              href='//fonts.googleapis.com/css?family=Montserrat&#038;subset=latin'>
+        <link rel='stylesheet' id='options_typography_Open+Sans-css'
+              href='//fonts.googleapis.com/css?family=Open+Sans&#038;subset=latin'>
+
+        <!-- Scripts-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+        <script src='js/jquery-migrate.min.js'></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+                integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+                crossorigin="anonymous"></script>
+        <script src='js/modernizr.js'></script>
+        <script type='text/javascript' src='//maps.googleapis.com/maps/api/js?v=3.exp&#038;sensor=false&#038;ver=4.2.7'></script>
+
+        <!-- Navigation menu for mobile devices-->
+        <script>
+            jQuery(function(){
+                jQuery('.sf-menu').mobileMenu({defaultText: "Navigate to..."});
+            });
+        </script>
+
+        <!-- Navigation menu-->
+        <script>
+            jQuery(function(){
+                // main navigation init
+                jQuery('ul.sf-menu').superfish({
+                    delay: 1000, // the delay in milliseconds that the mouse can remain outside a sub-menu without it closing
+                    animation: {
+                        opacity: "show",
+                        height: "show"
+                    }, // used to animate the sub-menu open
+                    speed: "normal", // animation speed
+                    autoArrows: false, // generation of arrow mark-up (for submenu)
+                    disableHI: true // to disable hoverIntent detection
+                });
+
+                //Zoom fix
+                //IPad/IPhone
+                var viewportmeta = document.querySelector && document.querySelector('meta[name="viewport"]'),
+                        ua = navigator.userAgent,
+                        gestureStart = function () {
+                            viewportmeta.content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6, initial-scale=1.0";
+                        },
+                        scaleFix = function () {
+                            if (viewportmeta && /iPhone|iPad/.test(ua) && !/Opera Mini/.test(ua)) {
+                                viewportmeta.content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
+                                document.addEventListener("gesturestart", gestureStart, false);
+                            }
+                        };
+                scaleFix();
+            })
+        </script>
+
+        <script>
+            jQuery(document).ready(function(){
+                if(!device.mobile() && !device.tablet()){
+                    jQuery('header .stuck_menu_wrap').tmStickUp({
+                        correctionSelector: jQuery('#wpadminbar'),
+                        listenSelector: jQuery('.listenSelector'),
+                        active: false,	pseudo: true});
+                }
+            })
+        </script>
+    </head>
+
+    <body class="home page page-id-203 page-template page-template-page-home page-template-page-home-php">
+        <div id="motopress-main" class="main-holder">
+
+            <!--HEADER-->
+            <header class="motopress-wrapper header">
+                <div class="container">
+                    <div class="row">
+                        <div class="span12">
+                            <div class="row">
+                                <div class="span12">
+                                    <div class="align-logo">
+                                        <div class="logo">
+                                            <a href="about.html" class="logo_h logo_h__img"><img
+                                                    src="img/about/brainfart-logo.png" alt="Brainfart logo"
+                                                    title="Brainfart" width="50%"></a>
+                                            <p class="logo_tagline">Incorporated</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="stuck_menu_wrap">
+                                    <div class="nav-wrapper span12">
+
+                                        <!--HAVIGATION-->
+                                        <nav class="nav nav__primary clearfix">
+                                            <ul id="topnav" class="sf-menu">
+                                                <li id="menu-item-1844"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-203 current_page_item">
+                                                    <a href="#">Home</a></li>
+                                                <li id="menu-item-1846"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                                    <a href="#">About us</a>
+                                                </li>
+                                                <li id="menu-item-1842"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                                        href="#">FAQs</a></li>
+                                                <li id="menu-item-1845"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
+                                                    <a href="#">Services</a>
+                                                </li>
+                                                <li id="menu-item-1843"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page">
+                                                    <a href="#">Blog</a>
+                                                </li>
+                                                <li id="menu-item-1841"
+                                                    class="menu-item menu-item-type-post_type menu-item-object-page"><a
+                                                        href="#">Contacts</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <script>
+                jQuery(document).ready(function($) {
+                    if(!device.mobile() && !device.tablet()){
+                        liteModeSwitcher = false;
+                    }else{
+                        liteModeSwitcher = true;
+                    }
+                    if($.browser.msie && parseInt($.browser.version) < 9){
+                        liteModeSwitcher = true;
+                    }
+
+                    jQuery('#parallax-slider-57195d64897a7').parallaxSlider({
+                        parallaxEffect: "parallax_effect_normal"
+                        ,	parallaxInvert: false			,	animateLayout: "simple-fade-eff"
+                        ,	duration: 1500			,	autoSwitcher: true			,	autoSwitcherDelay: 10000			,	scrolling_description: true			,	slider_navs: true			,	slider_pagination: "buttons_pagination"
+                        ,	liteMode :liteModeSwitcher
+                    });
+
+                });
+            </script>
+            <div id="parallax-slider-57195d64897a7" class="parallax-slider"><ul class="baseList"><li data-preview="img/about/banner-1.jpg" data-thumb-url="img/about/banner-1.jpg" data-ulr-link="#"><div class="slider_caption"><h1>IT School</h1>
+                <h2>go above</h2>
+                <h2>and beyond</h2></div></li><li data-preview="img/about/banner-2.png" data-thumb-url="img/about/banner-2.png" data-ulr-link="#"><div class="slider_caption"><h1>IT School</h1>
+                <h2>go above</h2>
+                <h2>and beyond</h2></div></li><li data-preview="img/about/banner-2.jpg" data-thumb-url="img/about/banner-2.jpg" data-ulr-link="#"><div class="slider_caption"><h1>IT School</h1>
+                <h2>go above</h2>
+                <h2>and beyond</h2></div></li></ul></div>
+            <div class="motopress-wrapper content-holder clearfix">
+                <div class="container">
+                    <div class="row">
+                        <div class="span12">
+                            <div class="row">
+                                <div class="span12">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="span12">
+                                    <div id="post-203" class="page post-203 type-page status-publish hentry">
+                                        <div class="content_box bg_linkColor ">
+                                            <div class="row ">
+                                                <div class="span12 "><h2 style="text-align: center;">Welcome</h2>
+                                                    <h5 style="text-align: center;">Web development: coding theory and practice</h5></div>
+                                                <div class="span12 content_box_hexagon">
+
+                                                    <section class="lazy-load-box  trigger effect-slidefromleft"
+                                                             data-delay="200" data-speed="800"
+                                                             style="-webkit-transition: all 800ms ease; -moz-transition: all 800ms ease; -ms-transition: all 800ms ease; -o-transition: all 800ms ease; transition: all 800ms ease;">
+                                                        <ul>
+                                                            <!--Front End icon-->
+                                                            <li>
+                                                                <div class="service-box hexagon">
+                                                                    <figure class="icon"><img src="img/about/html.png"
+                                                                                              width="43%"
+                                                                                              alt="Front End"/>
+                                                                    </figure>
+                                                                    <div class="service-box_body">
+                                                                        <div class="btn-align">
+                                                                            <a href="index.html"
+                                                                               title="Front End"
+                                                                               class="btn btn-inverse btn-normal btn-primary "
+                                                                               target="_self">Front End</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+
+                                                            <!--Back End icon-->
+                                                            <li>
+                                                                <div class="service-box hexagon">
+                                                                    <figure class="icon"><img src="img/about/server.png"
+                                                                                              width="50%"
+                                                                                              alt="Back End"/></figure>
+                                                                    <div class="service-box_body">
+                                                                        <div class="btn-align"><a
+                                                                                href="index.html"
+                                                                                title="Back End"
+                                                                                class="btn btn-inverse btn-normal btn-primary "
+                                                                                target="_self">Back End</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+
+                                                            <!--Quality Assurance-->
+                                                            <li>
+                                                                <div class="service-box hexagon">
+                                                                    <figure class="icon"><img src="img/about/qa.png"
+                                                                                              width="45%"
+                                                                                              alt="Quality Assurance"/>
+                                                                    </figure>
+                                                                    <div class="service-box_body">
+                                                                        <div class="btn-align"><a
+                                                                                href="index.html"
+                                                                                title="Quality Assurance"
+                                                                                class="btn btn-inverse btn-normal btn-primary "
+                                                                                target="_self">Quality Assurance</a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </section>
+
+                                                    <section class="lazy-load-box  trigger effect-slidefromright"
+                                                             data-delay="400" data-speed="800"
+                                                             style="-webkit-transition: all 800ms ease; -moz-transition: all 800ms ease; -ms-transition: all 800ms ease; -o-transition: all 800ms ease; transition: all 800ms ease;">
+                                                        <ul>
+                                                            <!--Android Developers-->
+                                                            <li>
+                                                                <div class="service-box hexagon">
+                                                                    <figure class="icon"><img src="img/about/android.png" width="50%"
+                                                                            alt="Android Developers"/></figure>
+                                                                    <div class="service-box_body">
+                                                                        <div class="btn-align"><a
+                                                                                href="index.html"
+                                                                                title="Android Developers"
+                                                                                class="btn btn-inverse btn-normal btn-primary "
+                                                                                target="_self">Android Developers</a></div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+
+                                                            <!--Apple Developer-->
+                                                            <li>
+                                                                <div class="service-box hexagon">
+                                                                    <figure class="icon"><img src="img/about/apple.png" width="40%"
+                                                                            alt="Apple Developer"/></figure>
+                                                                    <div class="service-box_body">
+                                                                        <div class="btn-align"><a
+                                                                                href="index.html"
+                                                                                title="Apple Developer"
+                                                                                class="btn btn-inverse btn-normal btn-primary "
+                                                                                target="_self">Apple Developer</a></div>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </section>
+                                                </div>
+
+                                                <div class="span12 ">
+                                                    <section class="lazy-load-box  trigger effect-slideup"
+                                                             data-delay="300" data-speed="800"
+                                                             style="-webkit-transition: all 800ms ease; -moz-transition: all 800ms ease; -ms-transition: all 800ms ease; -o-transition: all 800ms ease; transition: all 800ms ease;">
+                                                        <div class="service-box svbox_no_title margin_top-100">
+                                                            <div class="service-box_body">
+                                                                <div class="service-box_txt">Lorem ipsum dolor sit amet,
+                                                                    consectetur adipiscing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua<br/>
+                                                                    Ut enim ad minim veniam, quis nostrud exercitation
+                                                                    ullamco laboris nisi ut aliquip ex ea commodo
+                                                                    consequat.<br/>
+                                                                    Duis aute irure dolor in reprehenderit in voluptate
+                                                                    velit esse cillum dolore eu fugiat nulla pariatur.
+                                                                </div>
+                                                                <div class="btn-align"><a
+                                                                        href="#"
+                                                                        title="Lorem ipsum dolor sit amet"
+                                                                        class="btn btn-inverse btn-normal btn-primary "
+                                                                        target="_self">Learn more</a></div>
+                                                            </div>
+                                                        </div>
+                                                    </section>
+                                                </div>
+                                            </div>
+
+                                            <div class="clear">
+                                            </div>
+                                        </div>
+
+                                        <div class="row ">
+                                            <div class="span12 h_linkColor">
+                                                <section class="lazy-load-box  trigger effect-slidefromleft"
+                                                         data-delay="200" data-speed="800"
+                                                         style="-webkit-transition: all 800ms ease; -moz-transition: all 800ms ease; -ms-transition: all 800ms ease; -o-transition: all 800ms ease; transition: all 800ms ease;">
+                                                    <h2 style="text-align: center;">We Provide</h2>
+                                                </section>
+
+                                                <section class="lazy-load-box  trigger effect-slidefromright"
+                                                         data-delay="300" data-speed="800"
+                                                         style="-webkit-transition: all 800ms ease; -moz-transition: all 800ms ease; -ms-transition: all 800ms ease; -o-transition: all 800ms ease; transition: all 800ms ease;">
+                                                    <h5 style="text-align: center;">the best educational practices with cutting-edge technology </h5>
+                                                </section>
+                                            </div>
+                                        </div>
+
+                                        <div class="row ">
+                                            <div class="span4 ">
+                                                <section class="lazy-load-box  trigger effect-slidefromright"
+                                                         data-delay="400" data-speed="800"
+                                                         style="-webkit-transition: all 800ms ease; -moz-transition: all 800ms ease; -ms-transition: all 800ms ease; -o-transition: all 800ms ease; transition: all 800ms ease;">
+                                                    <p>
+                                                        <a href="#">
+                                                            <div class="service-box svbox_type1 custom_icon">
+                                                                <figure class="icon">
+                                                                    <img src="img/about/people.png" width="100%"
+                                                                         alt=""/>
+                                                                </figure>
+                                                                <div class="service-box_body">
+                                                                    <div class="service-box_txt">Lorem ipsum dolor sit
+                                                                        amet, consectetur adipiscing elit, sed do
+                                                                        eiusmod tempor incididunt ut labore et dolore
+                                                                        magna.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </p>
+                                                </section>
+                                            </div>
+
+                                            <div class="span4 ">
+                                                <section class="lazy-load-box  trigger effect-slidefromright"
+                                                         data-delay="300" data-speed="800"
+                                                         style="-webkit-transition: all 800ms ease; -moz-transition: all 800ms ease; -ms-transition: all 800ms ease; -o-transition: all 800ms ease; transition: all 800ms ease;">
+                                                    <p>
+                                                        <a href="#">
+                                                            <div class="service-box svbox_type1 custom_icon">
+                                                                <figure class="icon">
+                                                                    <img src="img/about/arrow.png" width="85%"
+                                                                         alt=""/>
+                                                                </figure>
+                                                                <div class="service-box_body">
+                                                                    <div class="service-box_txt">Lorem ipsum dolor sit
+                                                                        amet, consectetur adipiscing elit, sed do
+                                                                        eiusmod tempor incididunt ut labore et dolore
+                                                                        magna.
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </p>
+                                                </section>
+                                            </div>
+
+                                            <div class="span4 ">
+                                                <section class="lazy-load-box  trigger effect-slidefromright"
+                                                         data-delay="200" data-speed="800"
+                                                         style="-webkit-transition: all 800ms ease; -moz-transition: all 800ms ease; -ms-transition: all 800ms ease; -o-transition: all 800ms ease; transition: all 800ms ease;">
+                                                </section>
+                                                <p>
+                                                    <a href="#">
+                                                        <div class="service-box svbox_type1 custom_icon">
+                                                            <figure class="icon">
+                                                                <img src="img/about/computer.png" alt="" width="89%">
+                                                            </figure>
+                                                            <div class="service-box_body">
+                                                                <div class="service-box_txt">Lorem ipsum dolor sit
+                                                                    amet, consectetur adipiscing elit, sed do
+                                                                    eiusmod tempor incididunt ut labore et dolore
+                                                                    magna.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </p>
+                                                <section class="lazy-load-box  trigger effect-fade" data-delay="0"
+                                                         data-speed="600"
+                                                         style="-webkit-transition: all 600ms ease; -moz-transition: all 600ms ease; -ms-transition: all 600ms ease; -o-transition: all 600ms ease; transition: all 600ms ease;"></section>
+                                            </div>
+                                        </div>
+
+                                        <div class="spacer">
+                                        </div>
+                                        <section class="parallax-box image-parallax-box ">
+                                            <div class="parallax-content">
+                                                <div class="row ">
+                                                    <div class="span12 ">
+                                                        <section class="lazy-load-box  trigger effect-slideup"
+                                                                 data-delay="300" data-speed="800"
+                                                                 style="-webkit-transition: all 800ms ease; -moz-transition: all 800ms ease; -ms-transition: all 800ms ease; -o-transition: all 800ms ease; transition: all 800ms ease;">
+                                                            <div class="service-box sv_box_all_title1">
+                                                                <div class="service-box_body">
+                                                                    <h2 class="title">Perfect</h2>
+                                                                    <h5 class="sub-title">Experience</h5>
+                                                                    <div class="service-box_txt">&amp; High Quality
+                                                                        Education
+                                                                    </div>
+                                                                    <div class="btn-align">
+                                                                        <a href="uncategorized/mauris-posuere/"
+                                                                           title="More"
+                                                                           class="btn btn-inverse btn-normal btn-primary "
+                                                                           target="_self">More
+                                                                        </a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </section>
+                                                    </div>
+                                                </div>
+                                                <div class="clear">
+                                                </div>
+                                            </div>
+                                            <div class="parallax-bg" data-parallax-type="image"
+                                                 data-img-url="img/about/up.jpg" data-speed="normal"
+                                                 data-invert="false"></div>
+                                        </section>
+
+                                        <div class="content_box bg_DarckGrayColor baner_type01 ">
+                                            <div class="row ">
+                                                <section class="lazy-load-box  trigger effect-slidefromright"
+                                                         data-delay="300" data-speed="800"
+                                                         style="-webkit-transition: all 800ms ease; -moz-transition: all 800ms ease; -ms-transition: all 800ms ease; -o-transition: all 800ms ease; transition: all 800ms ease;">
+                                                    <div class="span8 ">
+                                                        <h3><a href="#">Lorem ipsum</a></h3>
+                                                        <p><img class="size-full alignnone"
+                                                                src="img/about/computer-mouse.jpg" width="770"
+                                                                height="360"/>
+                                                        </p>
+                                                    </div>
+                                                    <div class="span4 ">
+                                                        <div class="service-box sv_box_blue">
+                                                            <figure class="icon"><img
+                                                                    src="img/about/brain.png" width="40%"
+                                                                    alt=""/></figure>
+                                                            <div class="service-box_body">
+                                                                <div class="service-box_txt">Lorem ipsum dolor sit amet,
+                                                                    consectetur adipiscing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+
+                                            <div class="row ">
+                                                <section class="lazy-load-box  trigger effect-slidefromright"
+                                                         data-delay="400" data-speed="800"
+                                                         style="-webkit-transition: all 800ms ease; -moz-transition: all 800ms ease; -ms-transition: all 800ms ease; -o-transition: all 800ms ease; transition: all 800ms ease;">
+                                                    <div class="span4 ">
+                                                        <div class="service-box sv_box_pink">
+                                                            <figure class="icon">
+                                                                <img src="img/about/web.png" width="50%"
+                                                                     alt=""/>
+                                                            </figure>
+                                                            <div class="service-box_body">
+                                                                <div class="service-box_txt">Lorem ipsum dolor sit amet,
+                                                                    consectetur adipiscing elit, sed do eiusmod tempor
+                                                                    incididunt ut labore et dolore magna aliqua.
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="span8 ">
+                                                        <h3><a href="#">Dolor sit amet</a></h3>
+                                                        <p><img class="size-full alignnone"
+                                                                src="img/about/laptop.jpg" alt="" width="770"
+                                                                height="360"/></p></div>
+                                                </section>
+                                            </div>
+                                            <div class="clear">
+                                            </div>
+                                        </div>
+
+                                        <!--NEWS & EVENTS-->
+                                        <div class="row ">
+                                            <p>&nbsp;</p>
+
+                                            <div class="span4 ">
+                                                <div class="spacer">
+                                                </div>
+                                                <div class="spacer">
+                                                </div>
+                                                <div class="spacer">
+                                                </div>
+                                                <section class="lazy-load-box  trigger effect-slideup" data-delay="300"
+                                                         data-speed="800"
+                                                         style="-webkit-transition: all 800ms ease; -moz-transition: all 800ms ease; -ms-transition: all 800ms ease; -o-transition: all 800ms ease; transition: all 800ms ease;">
+                                                    <div class="service-box svbox_archive">
+                                                        <figure class="icon">
+                                                            <img src="img/about/earth.png" width="50%" />
+                                                        </figure>
+                                                        <div class="service-box_body">
+                                                            <h2 class="title">News</h2>
+                                                            <h5 class="sub-title">&amp; events</h5>
+                                                            <div class="btn-align">
+                                                                <a href="about-us/archives/" title="view archive"
+                                                                   class="btn btn-inverse btn-normal btn-primary "
+                                                                   target="_self">view archive</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </section>
+                                            </div>
+
+                                            <div class="span8 ">
+                                                <section class="lazy-load-box  trigger effect-slidefromright"
+                                                         data-delay="400" data-speed="800"
+                                                         style="-webkit-transition: all 800ms ease; -moz-transition: all 800ms ease; -ms-transition: all 800ms ease; -o-transition: all 800ms ease; transition: all 800ms ease;">
+                                                    <ul class="recent-posts post_meta_tetr unstyled">
+                                                        <li class="recent-posts_li post-71 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized cat-1-id  list-item-0 clearfix">
+                                                        <span class="meta">
+                                                            <div class="post-date">
+                                                                <span class="post_day">10</span>
+                                                                <span class="post_month">March</span>
+                                                            </div>
+                                                        </span>
+                                                            <h5><a href="#"
+                                                                   title="Lorem ipsum">Lorem ipsum</a></h5>
+                                                            <div class="excerpt">Lorem ipsum dolor sit amet, consectetur
+                                                                adipiscing elit. Sed blandit massa vel mauris
+                                                                sollicitudin dignissim. Phasellus ultrices tellus eget
+                                                                ipsum&hellip;
+                                                            </div>
+                                                            <a href="#"
+                                                               class="btn btn-primary" title="Lorem ipsum">More</a>
+                                                            <div class="clear">
+                                                            </div>
+                                                        </li>
+                                                        <li class="recent-posts_li post-77 post type-post status-publish format-standard has-post-thumbnail hentry category-nunc-interdum cat-5-id  list-item-1 clearfix">
+                                                        <span class="meta">
+                                                            <div class="post-date">
+                                                                <span class="post_day">25</span>
+                                                                <span class="post_month">March</span>
+                                                            </div>
+                                                        </span>
+                                                            <h5><a href="#"
+                                                                   title="Dolor sit amet">Dolor sit amet</a>
+                                                            </h5>
+                                                            <div class="excerpt">Lorem ipsum dolor sit amet, consectetur
+                                                                adipiscing elit. Sed blandit massa vel mauris
+                                                                sollicitudin dignissim. Phasellus ultrices tellus eget
+                                                                ipsum&hellip;
+                                                            </div>
+                                                            <a href="#"
+                                                               class="btn btn-primary"
+                                                               title="Dolor sit amet">More</a>
+                                                            <div class="clear"></div>
+                                                        </li>
+                                                    </ul>
+                                                </section>
+                                            </div>
+                                        </div>
+
+                                        <section class="parallax-box image-parallax-box px_for_footer">
+                                            <div class="parallax-content">
+                                                <div class="row ">
+                                                    <div class="span12 ">
+                                                        <section class="lazy-load-box  trigger effect-slideup"
+                                                                 data-delay="300" data-speed="800"
+                                                                 style="-webkit-transition: all 800ms ease; -moz-transition: all 800ms ease; -ms-transition: all 800ms ease; -o-transition: all 800ms ease; transition: all 800ms ease;">
+                                                            <div class="service-box svbox_px_btn_transp">
+                                                                <div class="service-box_body">
+                                                                    <h2 class="title">Lorem ipsum!</h2>
+                                                                    <h5 class="sub-title">dolor sit amet, consectetur adipiscing elit</h5>
+                                                                    <div class="btn-align"><a
+                                                                            href="vel-libero/phasellus-fringilla/"
+                                                                            title="More"
+                                                                            class="btn btn-inverse btn-normal btn-primary "
+                                                                            target="_self">More</a>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </section>
+                                                    </div>
+                                                </div>
+                                                <div class="clear">
+                                                </div>
+                                            </div>
+                                            <div class="parallax-bg" data-parallax-type="image"
+                                                 data-img-url="img/about/banner-bottom.jpg" data-speed="normal"
+                                                 data-invert="false"></div>
+                                        </section>
+
+                                        <div class="clear"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--FOOTER-->
+            <footer class="motopress-wrapper footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="span12">
+                            <div class="row copyright">
+                                <div class="span4">
+                                    <div id="footer-text" class="footer-text">
+                                        <a href="#" title="BrainfArt" class="site-name"><img src="img/about/brainfart-logo.png" width="25%" alt="BrainfArt" title="BrainfArt"></a><span>© 2016<span class="divider">.</span></span><a href="about.html" class="privacy-policy" title="Privacy Policy">Privacy Policy</a>
+
+                                    </div> </div>
+                                <div class="span4"">
+                                    <div id="text-6" class=""> <div class="textwidget"><i class="icon-globe"></i><p>1/20, Marazliivska St, Odessa, Odessa Oblast, 65000</p></div>
+                                    </div> </div>
+
+                            </div>
+
+                            <div class="row">
+                                <div class="footer_nav_wrapper">
+                                    <div class="span12">
+                                    </div>
+                                </div>
+                            </div> </div>
+                    </div>
+                </div>
+                <div">
+                    <style>#map{width:100%;height:400px;}</style>
+                    <script>
+                        // When the window has finished loading create our google map below
+                        google.maps.event.addDomListener(window, 'load', init);
+
+                        function init() {
+
+                            // The latitude and longitude to center the map (always required)
+                            var myLatlng = new google.maps.LatLng(46.47949270027675, 30.75542219712827);
+
+                            // Basic options for a simple Google Map
+                            // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                            var mapOptions = {
+                                // How zoomed in you want the map to start at (always required)
+                                zoom: 15,
+
+                                scrollwheel: false,
+
+                                // The latitude and longitude to center the map (always required)
+                                center: myLatlng, // Santa Barbara
+
+                                // How you would like to style the map.
+                                // This is where you would paste any style found on Snazzy Maps.
+                                styles:
+                                        [
+                                            {
+                                                "featureType": "all",
+                                                "elementType": "labels.text.fill",
+                                                "stylers": [
+                                                    {
+                                                        "saturation": 36
+                                                    },
+                                                    {
+                                                        "color": "#000000"
+                                                    },
+                                                    {
+                                                        "lightness": 40
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "all",
+                                                "elementType": "labels.text.stroke",
+                                                "stylers": [
+                                                    {
+                                                        "visibility": "on"
+                                                    },
+                                                    {
+                                                        "color": "#000000"
+                                                    },
+                                                    {
+                                                        "lightness": 16
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "all",
+                                                "elementType": "labels.icon",
+                                                "stylers": [
+                                                    {
+                                                        "visibility": "off"
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "administrative",
+                                                "elementType": "geometry.fill",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#000000"
+                                                    },
+                                                    {
+                                                        "lightness": 20
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "administrative",
+                                                "elementType": "geometry.stroke",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#000000"
+                                                    },
+                                                    {
+                                                        "lightness": 17
+                                                    },
+                                                    {
+                                                        "weight": 1.2
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "landscape",
+                                                "elementType": "geometry",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#000000"
+                                                    },
+                                                    {
+                                                        "lightness": 20
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "poi",
+                                                "elementType": "geometry",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#000000"
+                                                    },
+                                                    {
+                                                        "lightness": 21
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "road.highway",
+                                                "elementType": "geometry.fill",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#000000"
+                                                    },
+                                                    {
+                                                        "lightness": 17
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "road.highway",
+                                                "elementType": "geometry.stroke",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#000000"
+                                                    },
+                                                    {
+                                                        "lightness": 29
+                                                    },
+                                                    {
+                                                        "weight": 0.2
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "road.arterial",
+                                                "elementType": "geometry",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#000000"
+                                                    },
+                                                    {
+                                                        "lightness": 18
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "road.local",
+                                                "elementType": "geometry",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#000000"
+                                                    },
+                                                    {
+                                                        "lightness": 16
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "transit",
+                                                "elementType": "geometry",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#000000"
+                                                    },
+                                                    {
+                                                        "lightness": 19
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "featureType": "water",
+                                                "elementType": "geometry",
+                                                "stylers": [
+                                                    {
+                                                        "color": "#000000"
+                                                    },
+                                                    {
+                                                        "lightness": 17
+                                                    }
+                                                ]
+                                            }
+                                        ]
+                            };
+
+                            // Create the Google Map using out element and options defined above
+                            var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+                            var contentString = '<div id="content"></div>';
+                            var infowindow = new google.maps.InfoWindow({
+                                content: contentString
+                            });
+
+                            var image = 'img/about/marker.png';
+
+                            var marker = new google.maps.Marker({
+                                position: myLatlng,
+                                map: map,
+                                icon: image
+                            });
+
+                            // To add the marker to the map, call setMap();
+                            marker.setMap(map);
+
+                            google.maps.event.addListener(marker, 'click', function() {
+                                infowindow.open(map,marker);
+                            });
+
+                        }
+                    </script>
+                    <div id="map"></div> </div>
+            </footer>
+
+        </div>
+<!--        <div id="back-top-wrapper" class="visible-desktop">
+            <p id="back-top" style="display: block;>
+                <a href="#top"><span></span></a> </p>
+        </div>-->
+
+        <script src='js/bf.lazy-load.js'></script>
+        <script src='js/device.min.js'></script>
+        <script src='js/jquery.mousewheel.min.js'></script>
+        <script src='js/jquery.simplr.smoothscroll.min.js'></script>
+        <script src='js/bf.parallax.js'></script>
+        <script src='js/superfish.js'></script>
+        <script src='js/jquery.mobilemenu.js'></script>
+
+        <script src='js/jquery.flexslider-min.js'></script>
+        <script src='js/jplayer.playlist.min.js'></script>
+        <script src='js/jquery.jplayer.min.js'></script>
+        <script src='js/tmstickup.js'></script>
+        <script src='js/device.min.js'></script>
+        <script src='js/jquery.zaccordion.min.js'></script>
+        <script src='js/camera.min.js'></script>
+        <script src='js/jquery.isotope.js'></script>
+        <script src='js/bf-plugin.js'></script>
+        <script src='js/parallaxSlider.js'></script>
+
+        <script>
+            deleteCookie('cf-cookie-banner');
+        </script>
+    </body>
+</html>
