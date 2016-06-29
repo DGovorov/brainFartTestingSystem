@@ -1,39 +1,43 @@
-package com.brainfart.dbapplication;
+package com.brainfart.model;
 
 import java.util.ArrayList;
 import java.util.List;
 
 /**
-* Created by Dim on 10.05.2016.
-*/
+ * Created by Dim on 10.05.2016.
+ */
 public class Question {
 
 	private int id;
 	private int value;
 	private String content;
 	private List<Answer> answers;
+	private String type;
 
 	public Question(int id, int value, String content) {
 		this.id = id;
 		this.value = value;
 		this.content = content;
 		answers = new ArrayList<>();
-		System.out.println("Question created without answers");
 	}
 
 	public Question(int id, int value, String content, List<Answer> answers) {
 		this(id, value, content);
 		this.answers = answers;
-		System.out.println("Question created with answers");
+		System.out.println("Question created with answers: " + content);
 	}
 
 	public void addAnswer(Answer answer) {
 		answers.add(answer);
 	}
+	
+	public void setType(String type){
+		this.type = type;
+	}
 
 	public String getType() {
 		int trueAnswCounter = 0;
-		for (Answer answer : answers){
+		for (Answer answer : answers) {
 			if (answer.isCorrect()) {
 				trueAnswCounter++;
 			}
@@ -42,13 +46,16 @@ public class Question {
 		// if one correct answer - radio block
 		// if more than one, or none correct - checkbox
 		String type;
-		if (trueAnswCounter == 1){
-			type = "radio";
-		} else {
-			type = "checkbox";
+		
+		if (trueAnswCounter > 1){
+			return "checkbox";
 		}
-
-		return type;
+		
+		if (trueAnswCounter == 1) {
+			return "radio";
+		}
+		
+		return "";
 	}
 
 	public int getId() {

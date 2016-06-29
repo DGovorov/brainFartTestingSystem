@@ -1,4 +1,4 @@
-package com.brainfart.dbapplication;
+package com.brainfart.model;
 
 /**
  * Created by Dim on 10.05.2016.
