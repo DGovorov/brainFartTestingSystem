@@ -1,4 +1,4 @@
-package main.java.controller;
+package com.brainfart.controller;
 
 
 import java.util.List;
